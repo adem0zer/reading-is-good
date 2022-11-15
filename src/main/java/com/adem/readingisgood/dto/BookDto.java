@@ -2,16 +2,15 @@ package com.adem.readingisgood.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class UserDto {
+public class BookDto implements Serializable {
 
     private Long id;
-    private String name;
-    private String lastName;
-    private String password;
-    private String email;
+    private String bookName;
+    private Long quantity;
     private Date createdDate;
     private Date updatedDate;
 }
