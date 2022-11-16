@@ -31,4 +31,9 @@ public class Book extends Base {
     @Basic
     @Column(name = "quantity")
     private Long quantity;
+
+    @Basic
+    @Column(name = "price")
+    private Long price;
+
 }

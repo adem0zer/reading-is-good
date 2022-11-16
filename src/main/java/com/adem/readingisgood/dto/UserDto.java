@@ -1,17 +1,14 @@
 package com.adem.readingisgood.dto;
 
 import lombok.Data;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class UserDto {
+@EqualsAndHashCode(callSuper = true)
+public class UserDto extends BaseDto{
 
-    private Long id;
     private String name;
     private String lastName;
     private String password;
     private String email;
-    private Date createdDate;
-    private Date updatedDate;
 }

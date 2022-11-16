@@ -1,16 +1,12 @@
 package com.adem.readingisgood.dto;
 
 import lombok.Data;
-
-import java.io.Serializable;
-import java.util.Date;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class BookDto implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class BookDto extends BaseDto {
 
-    private Long id;
     private String bookName;
     private Long quantity;
-    private Date createdDate;
-    private Date updatedDate;
 }
