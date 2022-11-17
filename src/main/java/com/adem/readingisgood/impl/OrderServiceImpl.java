@@ -14,7 +14,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,6 +49,7 @@ public class OrderServiceImpl implements OrderService {
         order.setTotalPrice(sum.get());
         bookRepository.saveAllAndFlush(bookMap.values());
         orderRepository.saveAndFlush(order);
+        Utility.logger.info("SUCCESS");
         return true;
     }
 
