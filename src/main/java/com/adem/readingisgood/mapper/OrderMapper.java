@@ -1,7 +1,7 @@
 package com.adem.readingisgood.mapper;
 
-import com.adem.readingisgood.dto.UserDto;
-import com.adem.readingisgood.entity.User;
+import com.adem.readingisgood.dto.OrderDto;
+import com.adem.readingisgood.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.NullValuePropertyMappingStrategy;
@@ -12,5 +12,5 @@ import org.mapstruct.ReportingPolicy;
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
-public interface UserMapper extends BaseMapper<User, UserDto> {
+public interface OrderMapper extends BaseMapper<Order, OrderDto> {
 }

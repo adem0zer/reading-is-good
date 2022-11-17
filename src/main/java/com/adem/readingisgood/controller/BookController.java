@@ -1,7 +1,7 @@
 package com.adem.readingisgood.controller;
 
-import com.adem.readingisgood.dto.UserDto;
-import com.adem.readingisgood.service.CustomerService;
+import com.adem.readingisgood.dto.BookDto;
+import com.adem.readingisgood.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/customer", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/book", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
-public class CustomerController {
-    private final CustomerService customerService;
+public class BookController {
+    private final BookService bookService;
 
     @PostMapping("create")
-    public boolean create(@RequestBody UserDto userDto) {
-        return customerService.createCustomer(userDto);
+    public BookDto create(@RequestBody BookDto bookDto) {
+        return bookService.createBook(bookDto);
     }
 }
